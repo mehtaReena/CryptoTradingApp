@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,200&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: url(./bg.svg);
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100vh;
+    padding: 10px 20px;
+}
+
+img {
+    width: 100%;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* card CSS */
+
+.listofcurrencies {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 70%;
+}
+
+.currencycard {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    border: none;
+    border-radius: 9px;
+    align-items: center;
+    width: 30%;
+    height: fit-content;
+    padding: 10px;
+    box-shadow: 0px 5px 6px rgba(128, 128, 128, 0.363);
+}
+
+.currencycard:hover {
+    transform: scale(1.1);
+}
+
+.currencycard img {
+    width: 60px;
+    height: 60px;
+}
+
+.card-info {
+    font-size: 20px;
+    font-weight: 600;
+    gap: 5px;
+    padding: 10px;
+}
+
+.card-info p:first-of-type {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.card-info p:last-of-type {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.display-board {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.current-holdings,
+.transactions-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    gap: 20px;
+    height: 400px;
+}
+
+.transactions-list .list {
+    overflow-y: auto;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 20px;
+}
+
+.holding,
+.transaction {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 80%;
+    box-shadow: 0px 5px 6px rgba(128, 128, 128, 0.363);
+    padding: 10px;
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header h3,
+.header h1,
+.header p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.header h1 img {
+    width: 50px;
+}
+
+.header p img {
+    width: 20px;
+}
+
+.header h3 img {
+    width: 22px;
+}
+
+.pop-up {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -220px;
+    background-color: rgba(0, 0, 0, 0.322);
+}
+
+.pop-up .dialog-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 25%;
+    height: 35%;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.dialog-box .dialog-box-header {
+    width: 100%;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: black;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.dialog-box .dialog-box-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5px 10px;
+    gap: 10px;
+    width: 100%;
+    flex: 1;
+}
+
+.radio-buttons .buy-radio,
+.radio-buttons .sell-radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.dialog-box .input-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.dialog-box .transaction-type {
+    background-color: crimson;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+.dialog-box-body .amount-display {
+    font-size: 12px;
+    color: green;
+    margin-bottom: -5px;
+}
+
+.dialog-box-body .input-box {
+    margin-bottom: -10px;
+}
